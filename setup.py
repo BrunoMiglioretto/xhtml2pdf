@@ -24,14 +24,14 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 
 setup(
-    name="xhtml2pdf",
+    name="xhtml2pdf2",
     version=xhtml2pdf.__version__,
     description="PDF generator using HTML and CSS",
     license="Apache License 2.0",
     author="Dirk Holtwick",
-    maintainer="Luis Zarate",
-    maintainer_email="luisza14@gmail.com",
-    url="http://github.com/xhtml2pdf/xhtml2pdf",
+    maintainer="Bruno Miglioretto",
+    maintainer_email="brunomiglioretto@gmail.com",
+    url="http://github.com/brunomiglioretto/xhtml2pdf",
     keywords="PDF, HTML, XHTML, XML, CSS",
     install_requires=[
         "arabic-reshaper>=3.0.0",
