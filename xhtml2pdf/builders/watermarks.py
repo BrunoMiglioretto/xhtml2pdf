@@ -114,9 +114,10 @@ class WaterMarks:
         input1 = pypdf.PdfReader(istream)
         has_bg=False
         for pages, bgouter, step in WaterMarks.get_watermark(context, len(input1.pages)):
+            bg_bytes = bgouter.getBytesIO()
+            bginput = pypdf.PdfReader(bg_bytes)
+            pagebg = bginput.pages[0]
             for index, ctr in enumerate(pages):
-                bginput = pypdf.PdfReader(bgouter.getBytesIO())
-                pagebg = bginput.pages[0]
                 page = input1.pages[ctr-1]
                 if index%step == 0:
                     pagebg.merge_page(page)
